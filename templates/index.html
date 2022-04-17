@@ -15,6 +15,20 @@
       rel="stylesheet"
     />
     <style>
+      .container .right-wrapper{
+        padding-top: 50rem;
+      }
+      .right-wrapper button.wrapper:hover{
+        color: chartreuse;
+        background: blue;
+      }
+      .events{
+        display:flex;
+        flex-direction: column;
+        font-size: 20px;
+        
+      }
+
     </style>
 
   </head>
@@ -42,6 +56,15 @@
       </div>
       <div class="right-wrapper">
     <button class="wrapper" style="padding: 0;border: none;background: none;color: whitesmoke;"><i class="fas fa-angle-double-right"></i></button>
+  </div>
+    <div class="events">
+        {% for i in events %}
+        <span class="event_name">{{i.event_name }}</span>
+        <span class="category">{{ i.category}}</span>
+        <span class="category">{{ i.priorty }}</span>
+        <span class="category">{{i.eventTYPE}}</span>
+        {% endfor %}
+   
     </div>
     </div>
     {%load static%}
